@@ -12,6 +12,8 @@ const User = require('./models/User');
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(express.static('public'));
+
 // Database connection
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB connected to:', process.env.MONGO_URI))

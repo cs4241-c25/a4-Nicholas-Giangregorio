@@ -12,7 +12,7 @@ const User = require('./models/User');
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // Database connection
 mongoose.connect(process.env.MONGO_URI)
